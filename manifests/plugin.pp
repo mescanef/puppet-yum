@@ -27,6 +27,7 @@ define yum::plugin (
 
   package { $_pkg_name:
     ensure  => $ensure,
+    tag     => 'yum-plugin'
   }
 
   if ! defined(Yum::Config['plugins']) {
